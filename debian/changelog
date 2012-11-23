@@ -1,3 +1,16 @@
+yandex-contest-invoker (0.9-6) unstable; urgency=low
+
+  * Fixed dependencies
+  * Added cgroup mounting
+
+ -- Rashit Azizbaev <syndicut@yandex-team.ru>  Fri, 23 Nov 2012 16:20:11 +0400
+
+yandex-contest-invoker (0.9-5) unstable; urgency=low
+
+  * Fixed for precise
+
+ -- Rashit Azizbaev <syndicut@yandex-team.ru>  Wed, 21 Nov 2012 16:17:50 +0400
+
 yandex-contest-invoker (0.9-4) lucid; urgency=low
 
   * change dependency
