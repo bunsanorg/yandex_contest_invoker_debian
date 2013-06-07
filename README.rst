@@ -4,7 +4,7 @@ Yandex.Contest.Invoker debian package
 Overview
 --------
 
-This package is build for Ubuntu 10.04 (Lucid).
+This package is build for Ubuntu 12.04 (Precise).
 
 
 Build
