@@ -2,7 +2,7 @@ Source: yandex-contest-invoker
 Section: misc
 Priority: extra
 Maintainer: sarum9in <sarum9in@yandex-team.ru>
-Build-Depends: debhelper (>= 7), cmake, pkg-config, git-core, lxc-dev (=0.8.0~rc1-4ubuntu39.12.10.2~ubuntu12.04.1+yandex1), gcc-4.8, g++-4.8, libboost-system1.48-dev, libboost-filesystem1.48-dev, libboost-serialization1.48-dev, libboost-test1.48-dev, libboost-program-options1.48-dev, default-jdk, maven2
+Build-Depends: debhelper (>= 7), cmake, pkg-config, git-core, lxc-dev (=0.8.0~rc1-4ubuntu39.12.10.2~ubuntu12.04.1+yandex1), gcc-4.8, g++-4.8, libboost-system1.48-dev, libboost-filesystem1.48-dev, libboost-serialization1.48-dev, libboost-test1.48-dev, libboost-program-options1.48-dev, default-jdk, maven2, libboost-thread1.48-dev
 Standards-Version: 3.8.3
 
 Package: yandex-contest-invoker
