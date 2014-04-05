@@ -12,7 +12,7 @@ Build
 
     1. Fetch sources using *fetch* script.
 
-    #. Build it using your prefered utility (or use *debuild* script).
+    #. Build it using your preferred utility (or use *debuild* script).
 
 Testing
 -------
@@ -25,8 +25,6 @@ Cleaning
 --------
 
     - *clean* will reset sources to their original state (removing all files not included in selected commit).
-
-    - *clean -r* will remove all sources.
 
     - *clean -f* will run clean even if *repack* is set.
 

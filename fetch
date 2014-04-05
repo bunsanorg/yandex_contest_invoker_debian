@@ -4,18 +4,14 @@ cd "$(dirname "$0")"
 
 . ./config.sh
 
-./clean -f
+git submodule init
+git submodule update
 
 fetch()
 {
-    if [[ -d $1 ]]
+    if [[ ! -e "modules/$1/.git" ]]
     then
-        pushd "$1"
-        git fsck
-        git pull
-        popd
-    else
-        git clone "$repo/$1.git" "$1"
+        git submodule add "$repo/$1.git" "modules/$1"
     fi
 }
 

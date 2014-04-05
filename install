@@ -8,7 +8,7 @@ cd "$(dirname "$0")"
 
 for i in "${alllibs[@]}"
 do
-    pushd "$i/build"
+    pushd "modules/$i/build"
     make install DESTDIR="$root"
     popd
 done

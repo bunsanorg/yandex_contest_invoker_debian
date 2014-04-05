@@ -1,0 +1,30 @@
+[submodule "modules/bunsan_cmake"]
+	path = modules/bunsan_cmake
+	url = git://github.com/sarum9in/bunsan_cmake.git
+[submodule "modules/bunsan_testing"]
+	path = modules/bunsan_testing
+	url = git://github.com/sarum9in/bunsan_testing.git
+[submodule "modules/bunsan_common"]
+	path = modules/bunsan_common
+	url = git://github.com/sarum9in/bunsan_common.git
+[submodule "modules/yandex_contest_common"]
+	path = modules/yandex_contest_common
+	url = git://github.com/sarum9in/yandex_contest_common.git
+[submodule "modules/yandex_contest_system"]
+	path = modules/yandex_contest_system
+	url = git://github.com/sarum9in/yandex_contest_system.git
+[submodule "modules/yandex_contest_invoker"]
+	path = modules/yandex_contest_invoker
+	url = git://github.com/sarum9in/yandex_contest_invoker.git
+[submodule "modules/yandex_contest_invoker_compat_common"]
+	path = modules/yandex_contest_invoker_compat_common
+	url = git://github.com/sarum9in/yandex_contest_invoker_compat_common.git
+[submodule "modules/yandex_contest_invoker_flowctl_game"]
+	path = modules/yandex_contest_invoker_flowctl_game
+	url = git://github.com/sarum9in/yandex_contest_invoker_flowctl_game.git
+[submodule "modules/yandex_contest_invoker_compat_jni"]
+	path = modules/yandex_contest_invoker_compat_jni
+	url = git://github.com/sarum9in/yandex_contest_invoker_compat_jni.git
+[submodule "modules/yandex_contest_invoker_flowctl_pipectl"]
+	path = modules/yandex_contest_invoker_flowctl_pipectl
+	url = git://github.com/sarum9in/yandex_contest_invoker_flowctl_pipectl.git

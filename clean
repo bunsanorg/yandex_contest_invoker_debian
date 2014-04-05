@@ -4,24 +4,12 @@ cd "$(dirname "$0")"
 
 . ./config.sh
 
-clean()
-{
-    if [[ -d $1 ]]
-    then
-        pushd "$1"
-        git reset --hard
-        git clean -dfx
-        popd
-    fi
-}
-
 while getopts "frh" arg
 do
     case "$arg" in
         f) force=1 ;;
-        r) recursive=1 ;;
         h) ;;&
-        ?) printf "Usage: %s: [-r recursive] [-f ignore repack]\n" "$0" 1>&2 && exit 1;;
+        ?) printf "Usage: %s: [-f ignore repack]\n" "$0" 1>&2 && exit 1;;
     esac
 done
 shift $((OPTIND - 1))
@@ -31,12 +19,4 @@ then
     exit 0
 fi
 
-if [[ $recursive ]]
-then
-    rm -rf "${alllibs[@]}"
-else
-    for i in "${alllibs[@]}"
-    do
-        clean "$i"
-    done
-fi
+git submodule foreach 'git reset --hard && git clean -dfx && echo'
