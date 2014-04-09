@@ -7,7 +7,7 @@ cd "$(dirname "$0")"
 build()
 {
     pushd "$1"
-    ln -sf ../patch/* .
+    ln -sf ../../patch/* .
 cat >system-config.cmake <<EOF
 set(CMAKE_MODULE_PATH \${CMAKE_SOURCE_DIR}/../bunsan_cmake \${CMAKE_SOURCE_DIR}/../bunsan_testing \${CMAKE_SOURCE_DIR}/../yandex_contest_common)
 set(ENABLE_TESTS ${ENABLE_TESTS:-no})
@@ -38,7 +38,11 @@ then
     exit 0
 fi
 
+echo "prefix=/usr" > lxc.pc
+cat "$lxc_pc" >>lxc.pc
+export PKG_CONFIG_PATH="$PWD"
+
 for i in "${alllibs[@]}"
 do
-    build "$i"
+    build "modules/$i"
 done
