@@ -1,3 +1,11 @@
+yandex-contest-invoker (0.15-1) unstable; urgency=low
+
+  * bunsan::cmake fix (missing /usr/bin/yandex_contest_invoker_*)
+  * bunsan::asio updates
+  * yandex::contest::invoker::notifier::QueuedWriter update
+
+ -- Aleksey Filippov <sarum9in@gmail.com> Wed, 09 Apr 2014 19:02:30 +0400
+
 yandex-contest-invoker (0.14-1) unstable; urgency=low
 
   * Package structure update
