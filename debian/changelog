@@ -1,3 +1,9 @@
+yandex-contest-invoker (0.16-1) unstable; urgency=low
+
+  * Mapping /var/lib/ghc for ghc compiler
+
+ -- Sergey Poromov <poromov@gmail.com> Fri, 25 Jul 2014 02:20:34 +0400
+
 yandex-contest-invoker (0.15-1) unstable; urgency=low
 
   * bunsan::cmake fix (missing /usr/bin/yandex_contest_invoker_*)
