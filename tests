@@ -40,7 +40,7 @@ run_tests_io_wrap()
 
 for i in "${alllibs[@]}"
 do
-    pushd "$i"
+    pushd "modules/$i"
     if [[ -d java ]]
     then
         pushd java
