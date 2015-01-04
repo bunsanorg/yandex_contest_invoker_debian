@@ -1,3 +1,11 @@
+yandex-contest-invoker (0.17-1) unstable; urgency=low
+
+  * Migration to Ubuntu 14.04
+  * Multiple cgroup hierarchies support
+  * Migration to LXC-1.0
+
+ -- Aleksey Filippov <sarum9in@gmail.com> Wed, 02 Jan 2015 19:02:30 +0400
+
 yandex-contest-invoker (0.16-1) unstable; urgency=low
 
   * Mapping /var/lib/ghc for ghc compiler
