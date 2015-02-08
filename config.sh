@@ -1,7 +1,7 @@
 extlib_prefix=bunsan_
 lib_prefix=yandex_contest_
 extlibs=(cmake testing common)
-libs=(common system invoker invoker_compat_common invoker_flowctl_game invoker_compat_jni invoker_flowctl_pipectl)
+libs=(common system invoker invoker_compat_common invoker_compat_jni invoker_flowctl_pipectl)
 repo=git://github.com/sarum9in
 lxc_pc=/usr/share/pkgconfig/lxc.pc
 

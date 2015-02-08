@@ -1,3 +1,13 @@
+yandex-contest-invoker (0.18-1) unstable; urgency=low
+
+  * yandex::contest::invoker::flowctl::game removal
+  * Process: get Environment(), setEnvironment() and unsetEnvironment() bindings
+  * CLI migration to bunsan::application
+  * bunsan libraries update
+  * Migration to boost-1.55
+
+ -- Aleksey Filippov <sarum9in@gmail.com> Sun, 08 Feb 2015 18:02:00 +0100
+
 yandex-contest-invoker (0.17-1) unstable; urgency=low
 
   * Mapping /etc/mono for mono-based languages

@@ -48,3 +48,30 @@ Misc
     - *build* script may be used directly (but it's result can't be used in debian package building).
 
     - If you want to only repack debian package without rebuilding, set *repack* variable in *user-config.sh*.
+
+Dependencies
+------------
+
+    sudo apt-get install maven
+    sudo apt-get install python-software-properties
+    sudo apt-get install build-essential
+    sudo apt-get install devscripts
+    sudo apt-get install libseccomp0
+
+    sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+    sudo apt-get update
+    sudo apt-get install gcc-4.9 g++-4.9
+
+    sudo add-apt-repository ppa:boost-latest/ppa
+    sudo apt-get update
+    sudo apt-get install libboost1.55
+
+    sudo add-apt-repository ppa:ubuntu-lxc/stable
+    sudo apt-get update
+    sudo apt-get install lxc
+
+    sudo apt-get install ghc
+
+System configuration
+--------------------
+Add swapaccount=1 to kernel parameters.

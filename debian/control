@@ -2,12 +2,13 @@ Source: yandex-contest-invoker
 Section: misc
 Priority: extra
 Maintainer: sarum9in <sarum9in@yandex-team.ru>
-Build-Depends: debhelper (>= 7), cmake, pkg-config, git-core, lxc-dev (=0.8.0~rc1-4ubuntu39.12.10.2~ubuntu12.04.1+yandex1), gcc-4.8, g++-4.8, libboost-system1.54-dev, libboost-filesystem1.54-dev, libboost-serialization1.54-dev, libboost-test1.54-dev, libboost-program-options1.54-dev, libboost-thread1.54-dev, default-jdk, maven2
+Build-Depends: debhelper (>= 7), cmake, pkg-config, git-core, lxc-dev (=0.8.0~rc1-4ubuntu39.12.10.2~ubuntu12.04.1+yandex1), gcc-4.8, g++-4.8, libboost-system1.55-dev, libboost-filesystem1.55-dev, libboost-serialization1.55-dev, libboost-test1.55-dev, libboost-program-options1.55-dev, libboost-thread1.55-dev, default-jdk, maven2
 Standards-Version: 3.8.3
 
 Package: yandex-contest-invoker
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, lxc (=0.8.0~rc1-4ubuntu39.12.10.2~ubuntu12.04.1+yandex1), linux-image (>=3.0.4)
+Depends: ${shlibs:Depends}, ${misc:Depends}, lxc (=0.8.0~rc1-4ubuntu39.12.10.2~ubuntu12.04.1+yandex1)
+#, linux-image (>=3.0.4)
 Description: Restricted execution in LXC.
  Library allows user execute arbitrary group of processes
  in restricted environment using LXC.
