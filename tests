@@ -38,19 +38,7 @@ run_tests_io_wrap()
     "$@" &>"$tmpfile" || cat "$tmpfile" >>"$tests_log"
 }
 
-for i in "${alllibs[@]}"
-do
-    pushd "modules/$i"
-    if [[ -d java ]]
-    then
-        pushd java
-            run_tests_io_wrap mvn test
-        popd
-    fi
-    pushd build
-        run_tests ctest --output-on-failure
-    popd
-    popd
-done
+run_tests make -C binary_dir test ARGS=--output-on-failure
+(cd modules/yandex_contest_invoker_compat_jni/java && run_tests_io_wrap mvn test)
 
 chown --reference=tests -R .

@@ -6,16 +6,3 @@ cd "$(dirname "$0")"
 
 git submodule init
 git submodule update
-
-fetch()
-{
-    if [[ ! -e "modules/$1/.git" ]]
-    then
-        git submodule add "$repo/$1.git" "modules/$1"
-    fi
-}
-
-for i in "${alllibs[@]}"
-do
-    fetch "$i"
-done

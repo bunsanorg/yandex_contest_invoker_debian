@@ -4,45 +4,21 @@ cd "$(dirname "$0")"
 
 . ./config.sh
 
-build()
-{
-    pushd "$1"
-    ln -sf ../../patch/* .
-cat >system-config.cmake <<EOF
-set(CMAKE_MODULE_PATH \${CMAKE_SOURCE_DIR}/../bunsan_cmake \${CMAKE_SOURCE_DIR}/../bunsan_testing \${CMAKE_SOURCE_DIR}/../yandex_contest_common)
-set(ENABLE_TESTS ${ENABLE_TESTS:-no})
-set(CMAKE_BUILD_TYPE ${BUILD_TYPE:-Release})
-set(CMAKE_INSTALL_PREFIX ${INSTALL_PREFIX:-/usr})
-foreach(proj ${alllibs[*]})
-    include_directories(\${CMAKE_SOURCE_DIR}/../\${proj}/include)
-    link_directories(\${CMAKE_SOURCE_DIR}/../\${proj}/build)
-endforeach()
-EOF
-    if [[ -d java ]]
-    then
-        pushd java
-        mvn package -DskipTests
-        popd
-        ./jni_gen.sh
-        ./jni_validate.sh
-    fi
-    mkdir -p build
-    cd build
-    cmake "${CMAKE_FLAGS[@]}" ..
-    make "${MFLAGS[@]}"
-    popd
-}
-
 if [[ $repack ]]
 then
     exit 0
 fi
 
-echo "prefix=/usr" > lxc.pc
-cat "$lxc_pc" >>lxc.pc
-export PKG_CONFIG_PATH="$PWD"
+pushd modules/yandex_contest_invoker_compat_jni &>/dev/null
+pushd java &>/dev/null
+mvn package -DskipTests
+popd &>/dev/null
+./jni_gen.sh
+./jni_validate.sh
+popd &>/dev/null
 
-for i in "${alllibs[@]}"
-do
-    build "modules/$i"
-done
+mkdir -p binary_dir
+pushd binary_dir &>/dev/null
+cmake "${CMAKE_FLAGS[@]}" ..
+make "${MFLAGS[@]}"
+popd &>/dev/null
