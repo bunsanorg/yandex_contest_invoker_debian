@@ -7,6 +7,10 @@ install:
     - sudo apt-get install libboost1.55-dev boost1.55
     - sudo apt-get install maven
     - sudo apt-get install cmake
+    - sudo apt-get install lxc
     - sudo update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+    - sudo update-alternatives --set javac /usr/lib/jvm/java-8-openjdk-amd64/bin/javac
+    - sudo update-alternatives --set javah /usr/lib/jvm/java-8-openjdk-amd64/bin/javah
+    - sudo update-alternatives --set jar /usr/lib/jvm/java-8-openjdk-amd64/bin/jar
 script:
     - ./build
