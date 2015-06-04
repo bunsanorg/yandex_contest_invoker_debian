@@ -1,6 +1,7 @@
 language: cpp
 install:
     - sudo add-apt-repository ppa:openjdk-r/ppa -y
+    - sudo add-apt-repository ppa:boost-latest/ppa -y
     - sudo apt-get update -q
     - sudo apt-get install openjdk-8-jdk
     - sudo apt-get install libboost1.55-dev boost1.55
