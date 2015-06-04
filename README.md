@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/bunsanorg/yandex_contest_invoker_debian.svg?branch=master)](https://travis-ci.org/bunsanorg/yandex_contest_invoker_debian)
+
+
 Yandex.Contest.Invoker debian package
 =====================================
 
