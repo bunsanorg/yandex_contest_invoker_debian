@@ -2,16 +2,19 @@ language: cpp
 install:
     - sudo add-apt-repository ppa:openjdk-r/ppa -y
     - sudo add-apt-repository ppa:boost-latest/ppa -y
-    - sudo add-apt-repository ppa:george-edison55/cmake-3.x -y
+    #- sudo add-apt-repository ppa:george-edison55/cmake-3.x -y
     - sudo apt-get update -q
     - sudo apt-get install openjdk-8-jdk
     - sudo apt-get install libboost1.55-dev boost1.55
     - sudo apt-get install maven
-    - sudo apt-get install cmake
+    #- sudo apt-get install cmake
     - sudo update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
     - sudo update-alternatives --set javac /usr/lib/jvm/java-8-openjdk-amd64/bin/javac
     - sudo update-alternatives --set javah /usr/lib/jvm/java-8-openjdk-amd64/bin/javah
     - sudo update-alternatives --set jar /usr/lib/jvm/java-8-openjdk-amd64/bin/jar
+    - sudo wget http://www.cmake.org/files/v3.2/cmake-3.2.2-Linux-x86_64.tar.gz
+    - sudo tar xf cmake-3.2.2-Linux-x86_64.tar.gz
+    - sudo cp -r cmake-3.2.2-Linux-x86_64/* /usr
 -before_script:
 -    - export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 script:
