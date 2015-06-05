@@ -11,7 +11,7 @@ install:
     - sudo apt-get install maven
     - sudo apt-get install g++-5 gcc-5
     #- sudo apt-get install cmake
-    - sudo apt-get install lxc
+    - sudo apt-get install lxc-dev lxc
     - sudo update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
     - sudo update-alternatives --set javac /usr/lib/jvm/java-8-openjdk-amd64/bin/javac
     - sudo update-alternatives --set javah /usr/lib/jvm/java-8-openjdk-amd64/bin/javah
