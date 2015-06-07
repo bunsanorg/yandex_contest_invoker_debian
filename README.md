@@ -1,79 +1,52 @@
 [![Build Status](https://travis-ci.org/bunsanorg/yandex_contest_invoker_debian.svg)](https://travis-ci.org/bunsanorg/yandex_contest_invoker_debian)
 
-Yandex.Contest.Invoker debian package
-=====================================
+# Yandex.Contest.Invoker debian package
 
-Overview
---------
+## Overview
 
-This package is build for Ubuntu 12.04 (Precise).
+Ubuntu 14.04 (Trusty) package.
 
+## Build
 
-Build
------
+1. Fetch sources using `fetch` script.
+#. Build it using your preferred utility (or use `debuild` script).
 
-    1. Fetch sources using *fetch* script.
+## Testing
 
-    #. Build it using your preferred utility (or use *debuild* script).
+After package installation user may test it using `tests` script.
+This will only work if user put `ENABLE_TESTS=yes` in `user-config.sh` file
+and run built package in-place. Testing log will be put into `tests.log` file.
 
-Testing
--------
+## Cleaning
 
-After package installation user may test it using *tests* script.
-This will only work if user put *ENABLE_TESTS=yes* in *user-config.sh* file
-and run built package inplace. Testing log will be put into *tests.log* file.
+- `clean` will reset sources to their original state (removing all files not included in selected commit).
+- `clean -f` will run clean even if `repack` is set.
 
-Cleaning
---------
+## Misc
 
-    - *clean* will reset sources to their original state (removing all files not included in selected commit).
+- `install` script is not supposed to be used directly. It accepts single argument -- destination directory.
+- `build` script may be used directly (but it's result can't be used in debian package building).
+- If you want to only repack Debian package without rebuilding, set `repack` variable in `user-config.sh`.
 
-    - *clean -f* will run clean even if *repack* is set.
+## Dependencies
 
-SVN
----
-
-These sources can be placed into SVN. In such case *svn* script can be useful to maintain
-such import.
-
-*svn* script does 2 commits::
-
-    1. *.git* files (with appropriate comment).
-
-    2. all other files (invokes user's editor).
-
-Misc
-----
-
-    - *install* script is not supposed to be used directly.
-
-    - *build* script may be used directly (but it's result can't be used in debian package building).
-
-    - If you want to only repack debian package without rebuilding, set *repack* variable in *user-config.sh*.
-
-Dependencies
-------------
-
+    # Standard repository
     sudo apt-get install maven
     sudo apt-get install python-software-properties
     sudo apt-get install build-essential
     sudo apt-get install devscripts
-    sudo apt-get install libseccomp0
-
-    sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-    sudo apt-get update
+    sudo apt-get install libboost1.55
     sudo apt-get install gcc-4.9 g++-4.9
 
-    sudo add-apt-repository ppa:boost-latest/ppa
-    sudo apt-get update
-    sudo apt-get install libboost1.55
+    # Custom repositories
+    sudo add-apt-repository -y ppa:ubuntu-lxc/stable
+    sudo add-apt-repository -y ppa:george-edison55/cmake-3.x
+    sudo apt-get update -q
+    sudo apt-get install lxc cmake
 
-    sudo add-apt-repository ppa:ubuntu-lxc/stable
-    sudo apt-get update
-    sudo apt-get install lxc
+    # lxc.conf relies on this
+    sudo apt-get install ghc mono-complete
 
-    sudo apt-get install ghc
+## System configuration
 
-System configuration
---------------------
-Add swapaccount=1 to kernel parameters.
+Add `swapaccount=1` to kernel parameters.
