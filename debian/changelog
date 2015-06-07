@@ -4,7 +4,7 @@ yandex-contest-invoker (0.19-1) unstable; urgency=low
   * Multiple cgroup hierarchies support
   * Migration to LXC-1.0
 
- -- Aleksey Filippov <sarum9in@gmail.com> Wed, 06 Jun 2015 04:45:30 +0400
+ -- Aleksey Filippov <sarum9in@gmail.com> Sat, 06 Jun 2015 04:45:30 +0400
 
 yandex-contest-invoker (0.18-1) unstable; urgency=low
 
