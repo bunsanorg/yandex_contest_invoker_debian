@@ -9,7 +9,7 @@ Ubuntu 14.04 (Trusty) package.
 ## Build
 
 1. Fetch sources using `fetch` script.
-#. Build it using your preferred utility (or use `debuild` script).
+2. Build it using your preferred utility (or use `debuild` script).
 
 ## Testing
 
