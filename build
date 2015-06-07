@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+. /etc/profile
+
 cd "$(dirname "$0")"
 
 . ./config.sh
