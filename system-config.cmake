@@ -1,5 +1,5 @@
 set(ENABLE_TESTS ON)
 set(CMAKE_BUILD_TYPE Release)
-set(CMAKE_INSTALL_PREFIX /usr)
+set(CMAKE_INSTALL_PREFIX /usr CACHE INTERNAL "")
 
 include(${CMAKE_SOURCE_DIR}/user-config.cmake OPTIONAL)
