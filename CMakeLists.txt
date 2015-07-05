@@ -5,7 +5,7 @@ include(${CMAKE_SOURCE_DIR}/system-config.cmake OPTIONAL)
 project(yandex_contest_invoker_debian)
 
 add_subdirectory(modules/bunsan_cmake)
-add_subdirectory(modules/bunsan_testing)
+add_subdirectory(modules/bunsan_test)
 add_subdirectory(modules/bunsan_common)
 add_subdirectory(modules/yandex_contest_common)
 add_subdirectory(modules/yandex_contest_system)

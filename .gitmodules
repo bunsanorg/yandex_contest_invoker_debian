@@ -1,9 +1,9 @@
 [submodule "modules/bunsan_cmake"]
 	path = modules/bunsan_cmake
 	url = git://github.com/bunsanorg/cmake.git
-[submodule "modules/bunsan_testing"]
-	path = modules/bunsan_testing
-	url = git://github.com/bunsanorg/testing.git
+[submodule "modules/bunsan_test"]
+	path = modules/bunsan_test
+	url = git://github.com/bunsanorg/test.git
 [submodule "modules/bunsan_common"]
 	path = modules/bunsan_common
 	url = git://github.com/bunsanorg/common.git
