@@ -19,8 +19,8 @@ popd &>/dev/null
 ./jni_validate.sh
 popd &>/dev/null
 
-mkdir -p binary_dir
-pushd binary_dir &>/dev/null
+mkdir -p build
+pushd build &>/dev/null
 cmake "${CMAKE_FLAGS[@]}" ..
 make "${MFLAGS[@]}"
 popd &>/dev/null

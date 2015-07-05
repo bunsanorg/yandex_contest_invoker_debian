@@ -11,7 +11,7 @@ build: build-stamp
 build-stamp:
 	dh_testdir
 
-	$(CURDIR)/build
+	$(CURDIR)/build.sh
 
 	touch build-stamp
 
@@ -20,7 +20,7 @@ clean:
 	dh_testroot
 	rm -f build-stamp
 
-	$(CURDIR)/clean
+	$(CURDIR)/clean.sh
 
 	dh_clean
 
@@ -30,7 +30,7 @@ install: build
 	dh_prep
 	dh_installdirs
 
-	$(CURDIR)/install $(CURDIR)/debian/yandex-contest-invoker
+	$(CURDIR)/install.sh $(CURDIR)/debian/yandex-contest-invoker
 
 # Build architecture-independent files here.
 binary-indep: build install

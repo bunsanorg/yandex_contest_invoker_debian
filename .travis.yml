@@ -19,4 +19,4 @@ install:
     - echo 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64' > user-config.sh
     - echo 'MFLAGS=(-j2)' >> user-config.sh
 script:
-    - ./build
+    - ./build.sh

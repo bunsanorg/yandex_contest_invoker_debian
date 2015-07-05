@@ -38,7 +38,7 @@ run_tests_io_wrap()
     "$@" &>"$tmpfile" || cat "$tmpfile" >>"$tests_log"
 }
 
-run_tests make -C binary_dir test ARGS=--output-on-failure
+run_tests make -C build test ARGS=--output-on-failure
 (cd modules/yandex_contest_invoker_compat_jni/java && run_tests_io_wrap mvn test)
 
 chown --reference=tests -R .

@@ -20,4 +20,4 @@ then
 fi
 
 git submodule foreach 'git reset --hard && git clean -dfx && echo'
-rm -rf binary_dir
+rm -rf build

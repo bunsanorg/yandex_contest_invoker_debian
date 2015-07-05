@@ -6,7 +6,7 @@ cd "$(dirname "$0")"
 
 . ./config.sh
 
-make -C binary_dir install DESTDIR="$root"
+make -C build install DESTDIR="$root"
 install -d "$root/var/lib/yandex/contest/invoker/lxc"
 install -m 0644 -D "lxc.conf" "$root/etc/yandex/contest/invoker/lxc.conf"
 install -m 0644 -D "yandex-contest-invoker.sh" "$root/etc/profile.d/yandex-contest-invoker.sh"

@@ -8,24 +8,24 @@ Ubuntu 14.04 (Trusty) package.
 
 ## Build
 
-1. Fetch sources using `fetch` script.
-2. Build it using your preferred utility (or use `debuild` script).
+1. Fetch sources using `fetch.sh` script.
+2. Build it using your preferred utility (or use `debuild.sh` script).
 
 ## Testing
 
-After package installation user may test it using `tests` script.
+After package installation user may test it using `tests.sh` script.
 This will only work if user put `ENABLE_TESTS=yes` in `user-config.sh` file
 and run built package in-place. Testing log will be put into `tests.log` file.
 
 ## Cleaning
 
-- `clean` will reset sources to their original state (removing all files not included in selected commit).
-- `clean -f` will run clean even if `repack` is set.
+- `clean.sh` will reset sources to their original state (removing all files not included in selected commit).
+- `clean.sh -f` will run clean even if `repack` is set.
 
 ## Misc
 
-- `install` script is not supposed to be used directly. It accepts single argument -- destination directory.
-- `build` script may be used directly (but it's result can't be used in debian package building).
+- `install.sh` script is not supposed to be used directly. It accepts single argument -- destination directory.
+- `build.sh` script may be used directly (but it's result can't be used in debian package building).
 - If you want to only repack Debian package without rebuilding, set `repack` variable in `user-config.sh`.
 
 ## Dependencies
