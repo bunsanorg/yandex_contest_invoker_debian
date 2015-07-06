@@ -30,15 +30,17 @@ tmpfile="$(mktemp)"
 
 run_tests()
 {
+    echo Running "$@" ... >>"$tests_log"
     "$@" &>>"$tests_log" || true
 }
 
 run_tests_io_wrap()
 {
+    echo Running "$@" ... >>"$tests_log"
     "$@" &>"$tmpfile" || cat "$tmpfile" >>"$tests_log"
 }
 
 run_tests make -C build test ARGS=--output-on-failure
 (cd modules/yandex_contest_invoker_compat_jni/java && run_tests_io_wrap mvn test)
 
-chown --reference=tests -R .
+chown --reference=tests.sh -R .
