@@ -16,8 +16,8 @@ install:
     - sudo wget http://www.cmake.org/files/v3.2/cmake-3.2.2-Linux-x86_64.tar.gz # only 12.04
     - sudo tar xf cmake-3.2.2-Linux-x86_64.tar.gz # only 12.04
     - sudo cp -r cmake-3.2.2-Linux-x86_64/* /usr # only 12.04
-    - sudo wget http://downloads.sourceforge.net/project/turtle/turtle/1.2.7/turtle-1.2.7.tar.bz2
-    - sudo tar xf turtle-1.2.7.tar.bz2 -C /usr
+    #- sudo wget http://downloads.sourceforge.net/project/turtle/turtle/1.2.7/turtle-1.2.7.tar.bz2
+    #- sudo tar xf turtle-1.2.7.tar.bz2 -C /usr
     - echo 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64' > user-config.sh
     - echo 'MFLAGS=(-j2)' >> user-config.sh
 script:
